@@ -1,2 +1,12 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h2><%= @book.title %></h2>
+<h3><label>Author: </label><%= @book.author %></h3>
+<p><label>Description:</label><%= @book.description %></p>
+
+<ul>
+  <li>
+    <%= link_to "Edit", edit_book_path %>
+  </li>
+  <li>
+    <%= link_to "Delete", book_path(@book.id), method: :delete %>
+  </li>
+</ul>

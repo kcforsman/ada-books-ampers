@@ -1,5 +1,12 @@
 class BooksController < ApplicationController
+
+  def index
+    @books = Book.all
+  end
+
   def show
+    id = params[:id]
+    @book = Book.find(id)
   end
 
   def new
@@ -15,8 +22,8 @@ class BooksController < ApplicationController
   end
 
   def destroy
-  end
-
-  def index
+    id = params[:id]
+    @book = Book.find(id)
+    @book.destroy
   end
 end
