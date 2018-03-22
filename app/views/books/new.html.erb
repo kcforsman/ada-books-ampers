@@ -1,2 +1,52 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h2>Create a New Book</h2>
+
+<%= form_for @book do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  
+  <%= f.submit %>
+  <%= button_tag 'reset', :type => 'reset' %>
+<% end %>
+
+<!-- <form action="/books" method="post">
+  <ul>
+    <li>
+      <label for="title">Title:</label>
+      <input name="title" value="" id="title" type="text">
+    </li>
+    <li>
+      <label for="author">Author:</label>
+      <input name="author" id="author" type="text">
+    </li>
+    <li>
+      <label for="description">Description:</label>
+      <textarea name="description" id="description">
+      </textarea>
+    </li>
+    <li>
+      <label for="rating">Rating:  1  </label>
+      <input name="rating" id="rating" value="1" min="1" max="10" step="0.5" type="range" list="rate-list">
+      <label for="rating">  10</label>
+      <datalist id="rate-list">
+        <option value="1" label="1" />
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+        <option value="6">
+        <option value="7">
+        <option value="8">
+        <option value="9">
+        <option value="10" label="10" />
+      </datalist>
+    </li>
+  </ul>
+  <input name="submit" value="Create Book" type="submit">
+  <input name="reset" value="Reset Form" type="reset">
+</form> -->
