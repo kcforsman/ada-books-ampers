@@ -1,5 +1,6 @@
-<%= render partial: "form", locals: { page_title: "Edit #{@book.title}" } %>
-<!-- <%= form_for @book do |f| %>
+<h2 class="page-title"><%= page_title %></h2>
+
+<%= form_for @book do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
@@ -10,4 +11,4 @@
   <%= f.text_area :description %>
 
   <%= f.submit %>
-<% end %> -->
+<% end %>

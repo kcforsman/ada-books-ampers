@@ -1,6 +1,7 @@
-<h2>Create a New Book</h2>
 
-<%= form_for @book do |f| %>
+<%= render partial: "form", locals: { page_title: "Create New Book"} %>
+
+<!-- <%= form_for @book do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
@@ -9,10 +10,10 @@
 
   <%= f.label :description %>
   <%= f.text_area :description %>
-  
+
   <%= f.submit %>
   <%= button_tag 'reset', :type => 'reset' %>
-<% end %>
+<% end %> -->
 
 <!-- <form action="/books" method="post">
   <ul>
